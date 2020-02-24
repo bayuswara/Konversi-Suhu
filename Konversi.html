@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Konversi Suhu HTML</title>
+    <script type="text/javascript" src="latjs1.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap alert</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        function celciusfahrenheit() {
+            let celcius = document.getElementById('Suhu').value;
+            let hasil = (celcius * (9 / 5)) + 32;
+            document.getElementById('hasil').value = hasil;
+        }
+        function celciuskelvin() {
+            let celcius = document.getElementById('Suhu').value;
+            let hasil = celcius + 273.15;
+            document.getElementById('hasil').value = hasil;
+        }
+        function celciusreamur() {
+            let celcius = document.getElementById('Suhu').value;
+            let hasil = 4 / 5 * celcius;
+            document.getElementById('hasil').value = hasil;
+        }
+        function celciusrankine() {
+            let celcius = document.getElementById('Suhu').value;
+            let hasil = (celcius * 9 / 5) + 491.67;
+            document.getElementById('hasil').value = hasil;
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card col-sm-2">
+            <div class="card-header">
+                <h2> Konversi Suhu </h2>
+            </div>
+            Inputkan Suhu Celcius
+            <input type="number" id="Suhu" class="form-control">
+
+            </button>
+            <button type="button" class="btn btn-info btn-block" id="celciusfahrenheit" onclick="celciusfahrenheit()">
+                Convert Celcius to Fahrenheit
+            </button>
+
+            <button type="button" class="btn btn-secondary btn-block" name="celciuskelvin" onclick="celciuskelvin()">
+                Convert Celcius To Kelvin
+            </button>
+            <button type="button" class="btn btn-primary btn-block" name="celciusreamur" onclick="celciusreamur()">
+                Convert Celcius To Reamur
+            </button>
+            <button type="button" class="btn btn-primary btn-block" name="celciusrankine" onclick="celciusrankine()">
+                Convert Celcius To Rankine
+            </button>
+            Hasil
+            <input type="number" id="hasil" class="form-control" readonly>
+
+            <h6>Copyright Bayu</h6>
+
+
+
+</body>
+
+</html>
+</script>
